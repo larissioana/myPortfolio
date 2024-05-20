@@ -1,0 +1,123 @@
+.skills
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1 
+    {
+        font-size: clamp(1.4rem, 2rem, 2rem);
+        background: -webkit-linear-gradient(180deg, var(--gradient-clr1), var(--gradient-clr3));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .container 
+    {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 1rem;
+        gap: 2rem;
+        
+
+        .left
+        {
+            display: flex;
+            gap: 3rem;
+            flex-direction: column;
+         
+            button 
+            {
+                background: none;
+                border: none;
+                padding: 20px;
+                width: 10rem;
+                height: fit-content;
+                box-shadow: 2px 0px 7px 3px rgb(24, 24, 25);
+                cursor: pointer;
+                transition: all .5s ease;
+                border-radius: .2rem;
+                position: relative;
+
+                &:hover 
+                {
+                    background: -webkit-linear-gradient(180deg, var(--gradient-clr1), var(--gradient-clr3));
+                    box-shadow: none;
+                }
+
+                img 
+                {
+                    width: 25px;
+                    height: 25px;
+                    position: absolute;
+                    top: -.5rem;
+                    left: 0;
+                }
+            }
+        }
+
+        .right 
+        {
+            height: auto;
+            box-shadow: 2px 0px 7px 3px rgb(13, 13, 14);
+            width: 30rem;
+            padding: 2rem 2rem;
+            width: 500px;
+        
+            h2 
+            {
+                text-transform: capitalize;
+            }
+
+        }
+    }
+
+}
+
+@media screen and (max-width: 800px)
+{
+    .skills
+    {
+    .container
+    {
+        padding: 1rem;
+        justify-content: center;
+        align-items: center;
+
+    .right
+    {
+        width: 300px;
+    }
+
+    .left 
+    {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+}
+}
+}
+
+@media screen and (max-width: 600px)
+{
+    .skills
+    {
+        .container
+        {
+            .left 
+            {
+                padding: 1rem;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                button 
+                {
+                    max-width: 7rem;
+                }
+            }
+        }
+    }
+}

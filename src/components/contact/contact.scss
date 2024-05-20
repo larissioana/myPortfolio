@@ -1,0 +1,163 @@
+.contact
+{
+    display: flex;
+    padding: 2rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    
+    .textContainer
+    {
+        h1
+        {
+            font-size: clamp(1.4rem, 2rem, 2rem);
+            background: -webkit-linear-gradient(180deg, var(--gradient-clr1), var(--gradient-clr3));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p
+        {
+            font-size: clamp(1.1rem, 2vw, 1.5rem);
+            color: var(--gradient-clr3);
+            font-weight: bold;
+        }
+
+    }
+
+    .formContainer
+    {
+        form
+        {
+        display: flex;
+        flex-direction: column;
+
+        input,
+        textarea
+        {
+            border:none;
+            box-shadow: 1px 0px 7px 0px var(--gradient-clr1);
+            background: none;
+            color: #fff;
+            text-indent: 1rem;
+            padding: 1rem;
+            width: 500px;
+            margin-top: 1rem;
+            font-size: .9rem;
+        
+
+        &::placeholder
+        {
+            color: #fff;
+            font-size: .9rem;
+        }
+    }
+
+        button 
+        {
+            border: none;
+            margin-top: 1rem;
+            padding: 1rem;
+            background: linear-gradient(90deg, var(--gradient-clr1), var(--gradient-clr3));
+            font-weight: bold;
+            font-size: .9rem;
+            width: inherit;
+            cursor: pointer;
+            transition: all .5s ease;
+
+            &:hover
+            {
+                background: none;
+                border: none;
+                box-shadow: 1px 0px 7px 0px var(--gradient-clr1);
+            }
+        }
+
+        .success-container
+        {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 1px solid var(--gradient-clr1);
+            background: rgb(32, 31, 31);
+            padding: 1rem;
+            border-radius: .2rem;
+            max-width: 500px;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .close 
+            {
+                width: 3rem;
+                cursor: pointer;
+                position: absolute;
+                right: 0;
+                top: 1rem;
+            }
+
+            img 
+            {
+                width: 200px;
+            }
+        }
+
+        .success
+        {
+            margin-top: 2rem;
+            font-size: 1.1rem;
+        }
+    
+        }
+    }
+}
+
+@media screen and (max-width:600px)
+{
+    .contact
+    {
+        .formContainer
+        {
+        form 
+        {
+            input,
+            textarea
+            {
+                max-width: 300px;
+            }
+
+            button
+            {
+                width: inherit;
+            }
+        }
+    }
+    }
+}
+
+@media screen and (max-width:400px)
+{
+    .contact
+    {
+        .formContainer
+        {
+        form 
+        {
+            input,
+            textarea
+            {
+                max-width: 200px;
+            }
+
+            button
+            {
+                width: inherit;
+            }
+        }
+    }
+    }
+}

@@ -1,0 +1,150 @@
+.projects
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .flexContainer
+    {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 4rem;
+        padding: 0rem 2rem;
+
+        h1
+        {
+            font-size: clamp(1.4rem, 2rem, 2rem);
+            background: -webkit-linear-gradient(180deg, var(--gradient-clr1), var(--gradient-clr3));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    .container
+    {
+        
+        padding: 1rem;
+        transition: anim 1s ease-in;
+        .projects 
+        {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 0rem;
+           
+
+        .left 
+        {
+            flex: 3;
+            img 
+            {
+                width: 100%;
+                max-width: 500px;
+                object-fit: cover;
+            }
+        }
+
+        .right 
+        {
+            flex: 5;
+            box-shadow: 1px 2px 7px 0px #000000;
+            padding: 2rem;
+            height: auto;
+            border-radius: .3rem;
+            max-width: 600px;
+
+            p 
+            {
+               
+                line-height: 1.5rem;
+            }
+            .technologies
+            {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                column-gap: 1rem;
+                padding-bottom: 1rem;
+
+                p 
+                {
+                    color: var(--gradient-clr3);
+                    line-height: .3rem;
+                }
+            }
+
+            .source
+            {
+                display: flex;
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 2rem;
+
+                a 
+                {
+                    border-top: 2px solid var(--gradient-clr3);
+                    padding: 10px;
+                    width: 6rem;
+                    font-weight: bold;
+                    vertical-align: middle;
+                
+                    img 
+                    {
+                        width: 25px;
+                        padding-left: .5rem;
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+
+    }
+    }
+
+    .navigation
+    {
+        margin-top: 3rem;
+        display: flex;
+        gap: 1rem;
+
+        div
+        {
+            height: 1rem;
+            width:1rem;
+            clip-path: circle();
+            background: var(--gradient-clr3);
+            cursor: pointer;
+
+        }
+    }
+}
+
+@keyframes anim
+{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 850px)
+{
+   
+      .projects
+      {
+        flex-direction: column;
+
+        .container
+        {
+            .projects
+            {
+                flex-direction: column;
+                row-gap: -1rem;
+            }
+        }
+      }
+    
+}

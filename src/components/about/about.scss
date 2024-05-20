@@ -1,0 +1,45 @@
+.about-me
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem 2rem;
+
+    h1 
+    {
+        font-size: clamp(1.4rem, 2rem, 2rem);
+        background: -webkit-linear-gradient(180deg, var(--gradient-clr1), var(--gradient-clr3));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    span 
+    {
+        background: -webkit-linear-gradient(180deg, var(--gradient-clr1), var(--gradient-clr3));
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    p 
+    {
+        max-width: 800px;
+        text-align: start;
+        font-size: clamp(1rem, 2vw, 1.3rem);
+        line-height: 1.9rem;
+    }
+        .about-projects
+        {
+            color: rgba(255, 255, 255, 0.87);
+            font-size: clamp(1rem, 2vw, 1.3rem);
+            max-width: 800px;
+            width: 100%;
+
+        .color
+        {
+            background: -webkit-linear-gradient(180deg, var(--gradient-clr1), var(--gradient-clr3));
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        }
+}
