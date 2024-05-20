@@ -5,7 +5,7 @@ import emailjs from '@emailjs/browser';
 const Contact = () => {
     const [error, setError] = useState(false);
     const [success, setSuccess] = useState(false);
-    const [open, setOpen] = useState(true);
+    const [open, setOpen] = useState(false);
 
     const formRef = useRef();
     const serviceId = import.meta.env.VITE_SERVICE_ID;
@@ -27,10 +27,16 @@ const Contact = () => {
                     setError(true);
                 },
             );
+        setOpen(true);
     };
 
     return (
-        <section className="contact">
+        <section
+            className="contact"
+            style={{
+                background: open ? "#111" : ""
+            }}
+        >
             <div className="textContainer">
                 <h1>contact.</h1>
             </div>
