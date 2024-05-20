@@ -27,9 +27,12 @@ const Projects = () => {
             </div>
             <div className="container">
                 <div className="projects">
-                    <div className="left">
-                        <img src={image} alt={title} />
-                    </div>
+                    {
+                        image &&
+                        <div className="left">
+                            <img src={image} alt={title} />
+                        </div>
+                    }
                     <div className="right">
                         <h3>{title}</h3>
                         <p>{description}</p>

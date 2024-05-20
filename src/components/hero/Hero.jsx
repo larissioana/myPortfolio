@@ -31,7 +31,11 @@ const Hero = () => {
                                 See the latest works
                             </a>
                         </button>
-                        <button>Contact me</button>
+                        <button>
+                            <a href="#Contact">
+                                Contact me
+                            </a>
+                        </button>
                     </div>
                 </div>
                 <motion.div variants={sliderVariants} animate="animate" initial="initial" className="sliderContainer">
