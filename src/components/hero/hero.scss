@@ -66,6 +66,15 @@
             height: 10rem;
             clip-path: circle();
         }
+
+        .loader 
+        {
+            width: 10rem;
+            height: 10rem;
+            border-radius: 50%;
+            background-color: black;
+            filter: blur(8px);
+        }
     }
 
     .sliderContainer

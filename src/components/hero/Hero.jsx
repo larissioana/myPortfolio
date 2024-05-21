@@ -1,5 +1,6 @@
 import './hero.scss';
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 
 const sliderVariants = {
     initial: {
@@ -16,11 +17,19 @@ const sliderVariants = {
 };
 
 const Hero = () => {
+    const [loading, setLoading] = useState(true);
+
     return (
         <section className="hero">
             <div className="wrapper">
                 <div className="imgContainer">
-                    <img src="./larisa.png" alt="larisa oltean" />
+                    {loading && <div className="loader"></div>}
+                    <img
+                        src="/larisa.png"
+                        alt="larisa oltean"
+                        onLoad={() => setLoading(false)}
+                        style={{ display: loading ? 'none' : 'block' }}
+                    />
                 </div>
                 <div className="textContainer" >
                     <h2 >Larisa Ioana Oltean</h2>
