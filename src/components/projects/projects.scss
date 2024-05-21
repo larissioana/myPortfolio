@@ -115,7 +115,7 @@
             clip-path: circle();
             background: var(--gradient-clr3);
             cursor: pointer;
-
+            z-index: 10;
         }
     }
 }
